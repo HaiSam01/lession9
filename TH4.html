@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH4</title>
+</head>
+<body>
+
+<form>
+  <input id="month" type="text">
+<button type="button" onclick="tinhngay()"> Tính Số Ngày</button><br>
+  <label> Tháng Này Có Số Ngày</label>
+  <p id="result"></p>
+  <script>
+    function tinhngay() {
+      let a = document.getElementById("month").value;
+      let b = parseInt(a);
+      switch (b){
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 12:
+        case 10:
+          document.getElementById("result").innerHTML = "Có 31 Ngày"
+              break;
+        case 2:
+          document.getElementById("result").innerHTML = " Có 29 Hoặc 28 Ngày";
+          break;
+        case 4:
+        case 6:
+        case 11:
+        case 9:
+          document.getElementById("result").innerHTML = " Có 30 Ngày"
+              break;
+        default:
+          document.getElementById("result").innerHTML = " Vui Lòng Nhập Lại"
+              return b = 0;
+      }
+    }
+  </script>
+</form>
+</body>
+</html>

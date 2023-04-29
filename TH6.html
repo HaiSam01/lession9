@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH6</title>
+</head>
+<body>
+<input type="text" id="so1" >
+<div><table>
+  <tr>
+    <td><button type="button" onclick="inputValue(this.value)" value="1">1</button> </td>
+    <td><button type="button" onclick="inputValue(this.value)" value="2">2</button> </td>
+    <td><button type="button" onclick="inputValue(this.value)" value="3">3</button> </td>
+    <td><button type="button" onclick="inputValue(this.value)"  value="+" >+</button> </td>
+  </tr>
+  <tr>
+    <td><button type="button" onclick="inputValue(this.value)" value="4" >4</button> </td>
+    <td><button type="button" onclick="inputValue(this.value)" value="5">5</button> </td>
+    <td><button type="button" onclick="inputValue(this.value)" value="6">6</button> </td>
+    <td><button type="button" onclick="inputValue(this.value)" value="-">-</button> </td>
+  </tr> <tr>
+  <td><button type="button" onclick="inputValue(this.value)" value="7">7</button> </td>
+  <td><button type="button" onclick="inputValue(this.value)" value="8">8</button> </td>
+  <td><button type="button" onclick="inputValue(this.value)" value="9">9</button> </td>
+  <td><button type="button" onclick="inputValue(this.value)" value="*">x</button> </td>
+</tr> <tr>
+  <td><button type="button" onclick="xoa(this.value)" value="">C</button> </td>
+  <td><button type="button" onclick="inputValue(this.value)" value="0">0</button> </td>
+  <td><button type="button"  onclick="tong();">=</button> </td>
+  <td><button type="button" onclick="inputValue(this.value)" value="/">/</button> </td>
+
+</tr>
+</table></div>
+
+<script>
+  let so1 = document.getElementById("so1");
+  function inputValue (value) {
+so1.value += value;
+  }
+  function inputValue2 (value) {
+    so1.value -= value;
+  }
+  function xoa(){
+    so1.value = "";
+  }
+  function tong(){
+    let result = eval(so1.value);
+    so1.value = result;
+  }
+</script>
+</body>
+</html>

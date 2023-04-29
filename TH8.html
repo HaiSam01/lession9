@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH8</title>
+</head>
+<body>
+<button type="button" onclick="bai1()">bai1</button>
+<button type="button" onclick="bai2()">bai2</button>
+<button type="button" onclick="bai3()">bai3</button>
+<button type="button" onclick="bai4()">bai4</button>
+<button type="button" onclick="bai5()">bai5</button>
+<button type="button" onclick="bai6()">bai6</button>
+<button type="button" onclick="bai7()">bai7</button>
+<script>
+  function bai1() {
+    let a = parseInt(prompt("Nhap So a :"));
+    let b = parseInt(prompt("Nhap So b :"));
+
+    if (a % b === 0) {
+      alert(" a chia het cho b");
+    } else {
+      alert(" a Khong chia het cho b")
+    }
+  }
+  function bai2() {
+    let a = parseInt(prompt("Nhap Tuoi cua Hoc Sinh :"));
+
+    if ( a < 16 ) {
+      alert("Khong Du Tuoi Tuoi Vao Lop 10")
+    }
+    else {
+      alert("Du Tuoi Hoc Lop 10")
+    }
+  }
+  function bai3() {
+    let a = parseInt(prompt("Nhap So Can So Sanh :"));
+    if ( a < 0 ){
+      alert("So A nho hon 0");
+    }
+    else {
+      alert("So A lon hon 0");
+    }
+  }
+  function bai4() {
+    let a = parseInt(prompt("Nhap So a :"));
+    let b = parseInt(prompt("Nhap So b :"));
+    let c = parseInt(prompt("Nhap So c :"));
+
+    if (a > b) {
+      if (a > c)
+        alert("A la so lon nhat");
+      else {
+        alert("C la so lon nhat");
+      }
+
+    } else {
+      if (b > c) {
+        alert("B la so lon nhat");
+      }
+      else {
+        alert("C la so lon nhat");
+      }
+    }
+  }
+  function bai5() {
+    let kiemtra = parseInt(prompt("Diem Bai Kiem Tra :"));
+    let giuaky = parseInt(prompt("Diem Thi Giua Ky :"));
+    let cuoiky = parseInt(prompt("Diem Thi Cuoi Ky :"));
+
+    let diemtrungbinh = (kiemtra + giuaky + cuoiky) / 3 ;
+
+    if (diemtrungbinh < 5 ){
+      alert("Hoc Sinh Yeu");
+    }
+    else if (diemtrungbinh < 8 ) {
+      alert("Hoc Sinh Kha");
+    }
+    else if ( diemtrungbinh < 10 ) {
+      alert("Hoc Sinh Gioi");
+    }
+  }
+  function bai6() {
+    let hoahong = parseFloat(prompt("Nhap % Hoa Hong"));
+    let doanhthu = parseFloat(prompt("Nhap Doanh Thu :"));
+
+    let sotien = hoahong * doanhthu;
+    alert(sotien)
+  }
+  function bai7(){
+// Các thông số đầu vào
+      const loaiGoiCuoc = 'Cước phí trọn gói'; // Loại gói cước: Cước phí trọn gói hoặc Cước phí theo sử dụng
+      const soCuocGoi = 50; // Số lượng cuộc gọi trong tháng
+      const soTinNhan = 100; // Số lượng tin nhắn trong tháng
+      const duLieuSuDung = 10; // Dữ liệu sử dụng trong tháng (GB)
+
+// Tính cước phí dựa trên loại gói cước
+      let cuocPhi = 0;
+      if (loaiGoiCuoc === 'Cước phí trọn gói') {
+          cuocPhi = 200000; // Giá cước phí trọn gói trong tháng
+      } else if (loaiGoiCuoc === 'Cước phí theo sử dụng') {
+          cuocPhi = soCuocGoi * 200 + soTinNhan * 100 + duLieuSuDung * 50000; // Tính cước phí theo sử dụng
+      }
+
+      alert('Tổng cước phí trong tháng là: ' + cuocPhi + ' VNĐ');
+  }
+</script>
+</body>
+</html>

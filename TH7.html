@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH7</title>
+
+</head>
+<body >
+
+<div>
+  <form style="text-align: center">
+    <h2> DO YOU LOVE ME ? </h2>
+<button type="button" id="yes" onclick="yesClick()">Yes</button>
+    <button type="button" id="no" onmouseover="moveMouse()" style="position: absolute; left: 200px; top: 300px">No</button>
+
+  </form>
+</div>
+
+<script>
+
+  function yesClick() {
+    alert("Yes, Me Love u, Too")
+  }
+  function moveMouse() {
+    let c = document.getElementById("no");
+    let maxLeft = document.body.offsetWidth - c.offsetWidth;
+    let maxTop = document.body.offsetHeight - c.offsetHeight;
+
+    let a = Math.round(Math.random() * maxTop);
+    let b = Math.round(Math.random() * maxLeft);
+
+    c.style.left = b + "px";
+    c.style.top = a + "px";
+  }
+</script>
+</body>
+</html>

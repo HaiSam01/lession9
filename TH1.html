@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH1</title>
+
+</head>
+<body>
+<form>
+  <img alt="trai bong" id="myImg" style="width: 20%" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg">
+<button type="button" onclick="moveright()">Click Here Ball right</button>
+</form>
+
+<script>
+    let a = null
+    a = document.getElementById("myImg")
+
+    function init(){
+        a = document.getElementById("myImg")
+        a.style.position = 'relative';
+        a.style.left = '0px';
+    }
+    function moveright(){
+    a.style.left = parseInt(a.style.left)+ 10 + 'px';
+    }
+    window.onload = init;
+</script>
+</body>
+</html>
